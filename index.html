@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Losuj imię spośród podanych przez Ciebie</title>
+  <script src="https://kit.fontawesome.com/6e30b4ae66.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./reset.css">
   <link rel="stylesheet" href="./style.css">
   <meta author="Damian Moliński">
@@ -12,14 +13,27 @@
 <body>
   <h1>Losuj imię spośród podanych przez Ciebie</h1>
 
+  <div class="alert-wrapper info">
+    <p></p>
+    <span class="fas fa-times"></span>
+  </div>
+
   <form action="">
     <label for="">Stwórz własną listę imion</label>
     <input name="name" type="text" placeholder="Wprowadź imię">
     <button name="addName" type="submit">Dodaj imię</button>
+    <button class="btn-reset red">Usuń imiona</button>
   </form>
   <div class="names-list-wrapper">
-    <h2>Lista imion:</h2>
+    <header>
+      <h2>Lista imion:</h2>
+      <div class="actions">
+        <button class="btn-random-name green">Wylosuj imię</button>
+      </div>
+    </header>
+    <p class="names-list"></p>
   </div>
+  <p class="winner"></p>
 
 
 

@@ -10,8 +10,16 @@
   --main-color-font: #bcc4cd;
   --bg-light-gray: #292a2d;
   --bg-title: #000000;
-  --color-font-button: #a5a5a5;
   --border-focus-blue: #2a639b;
+  --color-info-border: #214981;
+  --color-info-font: #79c0ff;
+  --color--green-bg: #04843D;
+  --color-green-border: #0E9E4C;
+  --color-red-font: #FF494B;
+  --color-button-bg: rgba(33, 37, 46, 1.0);
+  --color-button-border: rgba(48, 53, 62, 1.0);
+  --color-button-font: rgba(200, 208, 217, 1.0);
+  --color-button-bg-hover: rgba(48, 53, 62, 1.0);
 }
 
 body {
@@ -31,6 +39,18 @@ input[type=text] {
   color: var(--main-color-font)
 }
 
+.green {
+  background-color: var(--color--green-bg);
+  border: 1px solid var(--color-green-border);
+  color: white;
+  border-radius: 5px;
+  font-weight: 400;
+}
+
+.red {
+  color: var(--color-red-font);
+}
+
 input:hover {
   border: 1px solid var(--main-border);
 }
@@ -40,11 +60,26 @@ input:focus {
 }
 
 button {
-  background-color: black;
-  color: var(--main-color-font);
-  border: 1px solid var(--main-border);
-  padding: 5px;;
+  background-color: var(--color-button-bg);
+  color: var(--color-button-font);
+  border: 1px solid var(--color-button-border);
+  padding: 5px 8px;
+  border-radius: 5px;
   font-weight: 600;
+  margin: 3px;
+}
+
+button:hover {
+  border: 1px solid var(--color-button-font);
+  background-color: var(--color-button-bg-hover);
+  transition: .3s background-color linear;
+  transition: .3s border linear;
+}
+
+button.btn-reset {
+  /* color: red; */
+  font-weight: 400;
+  display: none;
 }
 
 h1 {
@@ -72,4 +107,54 @@ form {
   padding: 20px;
   background-color: var(--bg-light-gray);
   border: 1px dotted var(--main-border);
+  position: relative;
+}
+
+.names-list-wrapper > header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+/* outline: 1px solid red; */
+}
+
+.btn-random-name {
+  display: none;
+}
+
+.names-list {
+  font-size: 2rem;
+}
+
+.alert-wrapper {
+  margin: 5px 0;
+  justify-content: space-between;
+  padding: 30px;
+  display: none;
+}
+
+
+.info {
+  color: var(--color-info-font);
+  border: 1px solid var(--color-info-border);
+  background-color: rgba(33, 73,129, .2);
+}
+
+.btn-chooseName {
+  position: static;
+  top: 20px;
+  right: 20px;
+}
+
+.winner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* outline: 1px dashed red; */
+  border: 1px solid var(--main-border);
 }
