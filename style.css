@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+*, *:before, *:after{
+  box-sizing: border-box;
+}
+
+:root {
+  --main-border: #525252;
+  --main-bg-color: #202124;
+  --main-color-font: #bcc4cd;
+  --bg-light-gray: #292a2d;
+  --bg-title: #000000;
+  --color-font-button: #a5a5a5;
+  --border-focus-blue: #2a639b;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  background-color: #202124;
+  color: #bcc4cd;
+}
+
+input[type=text] {
+  display: block;
+  background-color: var(--main-bg-color);
+  border: 1px solid var(--bg-light-gray);
+  width: 200px;
+  margin: 5px 0;
+  padding: 5px;
+  color: var(--main-color-font)
+}
+
+input:hover {
+  border: 1px solid var(--main-border);
+}
+
+input:focus {
+  outline: 1px solid #2a639b;
+}
+
+button {
+  background-color: black;
+  color: var(--main-color-font);
+  border: 1px solid var(--main-border);
+  padding: 5px;;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 600;
+  text-align: center;
+  padding: 20px 0;
+  outline: 1px solid black;
+  border-bottom: 1px solid var(--main-border);
+}
+
+form {
+  padding: 40px;
+  position: fixed;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--bg-light-gray);
+  border: 1px solid var(--main-bg-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.names-list-wrapper {
+  margin: 100px 50px;
+  padding: 20px;
+  background-color: var(--bg-light-gray);
+  border: 1px dotted var(--main-border);
+}
