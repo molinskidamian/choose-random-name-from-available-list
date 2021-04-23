@@ -103,11 +103,10 @@ form {
 }
 
 .names-list-wrapper {
-  margin: 100px 50px;
+  margin: 30px 50px;
   padding: 20px;
   background-color: var(--bg-light-gray);
   border: 1px dotted var(--main-border);
-  position: relative;
 }
 
 .names-list-wrapper > header{
